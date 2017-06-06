@@ -1,0 +1,18 @@
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: tantalist-db
+  username: postgres
+  password: groceries
+  host: 127.0.0.1
+test:
+  <<: *default
+  database: tantalist_db_test
+  username: postgres
+  password: groceries
+  host: 127.0.0.1
